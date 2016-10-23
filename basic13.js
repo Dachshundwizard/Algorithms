@@ -1,46 +1,82 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Algorithms</title>
-	<script type="text/javascript">
+
 		/* 1. Print all the integers from 1 to 255.*/
-		for (var i = 1; i <= 255; i++) {
-			console.log(i);
+		function print255(){
+		    for(var i = 1; i < 256; i++){
+		        console.log(i);
+		    }
 		}
+		print255();
+
+		////////or////////
+
+		function print255(){
+		    var num = 1;
+		    while(num < 256){
+		        console.log(num);
+		        num = num + 1;
+		    }
+		}
+		print255();
+
 		/* 2. Print all odd integers from 1 to 255.*/
-		for (var i = 1; i <= 255; i++) {
-			if (i % 2 == 0) {
-				console.log(i);
+		function odd255(){
+		    for(var i = 1; i < 256; i++){
+		        if(i % 2 == 1){
+		            console.log(i);
+		        }
+		    }
+		}
+
+		////////or////////
+
+		function odd255(){
+		    var num = 1;
+		    while(num < 255){
+		        num = num + 2;
+		        console.log(num);
+		    }
+		}
+		odd255();
+
+		/* 3. Print integers from 0 to 255, and with each integer print the sum so far.*/
+		function intAndSum(){
+		var sum = 0;
+		for (var i = 0; i <256; i++){
+		    sum = sum + i;
+		    console.log(i + " " + sum);
+		    }
+		}
+		intAndSum();
+		/* 4. Iterate through a given array, printing each value.*/
+		function iterate_array(){
+			for(var i = 0; i < arr.length; i++){
+				console.log(arr[i]);
 			}
 		}
-		/* 3. Print integers from 0 to 255, and with each integer print the sum so far.*/
-		var sum = 0;
-		for (var i = 0; i <= 255; i++) {
-			sum += i;
-			console.log(i +  " " + (sum));
-		}
-		/* 4. Iterate through a given array, printing each value.*/
-		var numbers = [1, 2, 3, 4, 5, 6];
-		var arrayLength = numbers.length;
-		for (var i = 0; i < arrayLength; i++) {
-    		console.log(numbers[i]);
-    	}
+		iterate_array([11,22,43,25]);
+
     	/* 5. Given an array, find and print its largest element*/
-    	var maxElement = numbers[0];
-    	for (var i = 0; i < arrayLength; i++) {
-    		if (maxElement < numbers[i]) {
-    			maxElement = numbers[i];
-    		}
-    	}
-    	console.log(maxElement);
+		function find_max(arr){
+		    var max = 0;
+		    for(var i = 0; i < arr.length; i++){
+		        if(arr[i] > max){
+		            max = arr[i];
+		        }
+		    }
+		    console.log("max value is: " + max);
+		}
+		find_max([44,32,2,55,3]);
+
     	/* 6. Analyze an array’s values and print the average.*/
-    	var average = 0;
-    	var count = 0;
-    	for (var i = 0; i < arrayLength; i++) {
-    		average += numbers[i];
-    		count++;
-    	}
-    	console.log(average/count);
+		function find_avg(arr){
+		    var sum = 0;
+		    for(var i = 0; i < arr.length; i++){
+		        sum += arr[i];
+		    }
+		    var average = sum / arr.length;
+		    console.log(average);
+		}
+		find_avg([4,3,33,22,1]);
     	/* 7. Create an array with all the odd integers between 1 and 255 (inclusive).*/
     	var arrayOdd = [];
     	for (var i = 0; i <= 255; i++) {
@@ -50,18 +86,24 @@
 			}
 		}
 		/* 8. Square each value in a given array, returning that same array with changed values.*/
-		var squareNum = [];
-		for (var i = 0; i < squareNum.length; i++) {
-			numbers[i] = squareNum[i*i];
+		function sqrArr(arr){
+		    for(var i = 0; i < arr.length; i++){
+		        arr[i] = arr[i]*arr[i];
+		    }
+		    return arr;
 		}
+		console.log(sqrArr([3,4,6,2,1]));
 		/* 9. Given an array and a value Y, count and print the number of array values greater than Y*/
-		var y = 1;
-		var countarray =0;
-		for (var i = 0; i <arrayLength; i++) {
-			if (numbers[i] < y) {
-				countarray++;
-			}
+		function greaterY(arr, y){
+		    var count = 0;
+		    for(var idx = 0; idx < arr.length; idx++){
+		        if(arr[idx] > y){
+		            count++;
+		        }
+		    }
+		            console.log("There are %d values greater than the Y value of %d", count, y);
 		}
+		greaterY([4,5,6,7,8,9,10], 7);
 		/* 10. Return the given array after setting any negative values to zero.*/
 		var arrayNeg = [-1, 2, -4, 5];
 		for (var i = 0; i <arrayNeg.length; i++) {
