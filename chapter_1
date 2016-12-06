@@ -237,3 +237,41 @@ function plrh(arr){
 
 var myArr = [5,2,7,3,5,6,3,3,2,1]
 console.log(`The highest element in ${myArr} is ${plrh(myArr)}`);
+
+
+//Invert Hash. Build invertHash(assocArr) to convert hash keys to values and values to keys. //
+
+function invert_hash(arr_obj){
+    var object2 = {}
+    var arr_keys = Object.keys(arr_obj)
+    for(var i = 0; i < arr_keys.length; i++){
+        object2[arr_obj[arr_keys[i]]] = arr_keys[i]
+    }
+    return resonse_obj
+}
+var arr_obj = {"name": "Zaphod", "charm": "high", "morals": "dicey"}
+console.log(arr_obj)
+
+function invertHash(assocArr){
+  var invertedObj = {};
+  var keyArr=[];
+  var valArr=[];
+
+  for(key in assocArr){
+    keyArr.push(key);
+    valArr.push(assocArr[key]);
+  }
+
+  for(var j = 0;j < keyArr.length;j++){
+    invertedObj[valArr[j]]=keyArr[j];
+  }
+  return invertedObj
+}
+
+// console.log(zipArrays([1,2,3],["a","b","c"]))
+
+// var invertMe = {0:"A", 1:"B", 2:"C"};
+// invertHashInPlace(invertMe);
+// console.log(invertMe);
+
+// console.log(invertHash({0:"A", 1:"B", 2:"C"}));
