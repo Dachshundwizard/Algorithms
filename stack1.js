@@ -40,6 +40,7 @@ function stack(){
     this.contains = function(val){
         var node = this.top;
         while(node){
+
             if(node.data === val){
                 return true;
             }
