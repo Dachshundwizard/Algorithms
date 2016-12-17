@@ -1,102 +1,102 @@
-// function arrayReverse(array){
-//     var newArray=[]
-//     for (var i = array.length-1; i >= 0; i--) {
-//         newArray.push(array[i]);
-//     }
-//     newArray
-//     console.log(newArray);
-//     return newArray;
+function arrayReverse(array){
+    var newArray=[]
+    for (var i = array.length-1; i >= 0; i--) {
+        newArray.push(array[i]);
+    }
+    newArray
+    console.log(newArray);
+    return newArray;
+}
+arrayReverse([1,2,3,4,5]);
+
+//1st challenge reverse string
+//2nd challenge figure out how to do this faster, without creating new array
+function arrayReverse(array){
+        array.reverse();
+        console.log(array);
+}
+arrayReverse([1,2,3,4,5]);
+////
+
+function reverseArray(arr){
+    for(var i = 0; i < Math.floor(arr.length/2); i++){
+        var temp = arr[i];
+        arr[i] = arr[arr.length-1-i]
+        arr[arr.length-1-i] = temp;
+    }
+}
+var x  = [1,2,3,4,5];
+reverseArray(x)
+console.log(x)
+
+function reverseArray(arr){
+    for(var i = 0; i < arr.length/2; i++){
+        var last = arr.length-1-i;
+        var temp = arr[i];
+        arr[i] = arr[last]
+        arr[last] = temp;
+    }
+    return arr;
+}
+var arr = [22,54,231,2,1344,2]
+console.log(reverseArray(arr))
+
+// var myDictionary={
+//     key:"value"
 // }
-// arrayReverse([1,2,3,4,5]);
 //
-// //1st challenge reverse string
-// //2nd challenge figure out how to do this faster, without creating new array
-// function arrayReverse(array){
-//         array.reverse();
-//         console.log(array);
-// }
-// arrayReverse([1,2,3,4,5]);
-// ////
+// myDictionary["key"] or
+// myDictionary.key
 //
-// function reverseArray(arr){
-//     for(var i = 0; i < Math.floor(arr.length/2); i++){
-//         var temp = arr[i];
-//         arr[i] = arr[arr.length-1-i]
-//         arr[arr.length-1-i] = temp;
-//     }
-// }
-// var x  = [1,2,3,4,5];
-// reverseArray(x)
-// console.log(x)
+// //They can only have the key once. Cannot have multiples of the same key in same dictionary.
+// // 3rd callenge, given a string, return a string or array or dict with just the letters that occur once.
 //
-// function reverseArray(arr){
-//     for(var i = 0; i < arr.length/2; i++){
-//         var last = arr.length-1-i;
-//         var temp = arr[i];
-//         arr[i] = arr[last]
-//         arr[last] = temp;
-//     }
-//     return arr;
-// }
-// var arr = [22,54,231,2,1344,2]
-// console.log(reverseArray(arr))
-//
-// // var myDictionary={
-// //     key:"value"
-// // }
-// //
-// // myDictionary["key"] or
-// // myDictionary.key
-// //
-// // //They can only have the key once. Cannot have multiples of the same key in same dictionary.
-// // // 3rd callenge, given a string, return a string or array or dict with just the letters that occur once.
-// //
-//
-// //object = {}
-// //object[key] = value
-// //object[key] <---will give you back the value
-// //e.g. an array[0] would give you back the value at the first index
-// function getUniqueLettersFrom(string){
-//     var tempObject = {};//Creates an empty object
-//     for (var i = 0; i < string.length; i++){
-//         if(tempObject[string[i]] === undefined){
-//             //does that thing(key) exist in the object?
-//             tempObject[string[i]] = 1;//{'h':1, 'e':1, 'l':2}
-//             //if it doesnt then create it and set equel to 1
-//         }
-//     else {
-//         // if already there, add to it
-//         tempObject[string[i]] += 1;
-//     }
-//     }
-//     var finalString = ""
-//     for (var key in tempObject){//This is used because its an object
-//         //goes through each key in the object
-//         if(tempObject[key] === 1){
-//             // tests whether the value = 1 and if so adds the value to final string
-//             finalString += key
-//         }
-//     }
-//     return finalString
-// }
-// console.log(getUniqueLettersFrom("Hello"));
-//
-// //given 2 arrays, generate an object, lengths are equel. Key from array 1 and value from array 2.
-// function zipArrays(arr1, arr2){
-//     var emptyObject = {}
-//     for(var i = 0; i < arr1.length; i++){
-//         emptyObject[arr1[i]] = arr2[i];
-//     }
-//     return emptyObject;
-// }
-// console.log(zipArrays([1,"fuck",144], ["yikes!", 13, 100]));
-//
-// function zipArrays(arr1, arr2){
-//     var emptyObject = {}
-//     for(var i = 0; i < arr1.length; i++){
-//         emptyObject[arr[i]] = arr2[i];
-//     }
-// }
+
+//object = {}
+//object[key] = value
+//object[key] <---will give you back the value
+//e.g. an array[0] would give you back the value at the first index
+function getUniqueLettersFrom(string){
+    var tempObject = {};//Creates an empty object
+    for (var i = 0; i < string.length; i++){
+        if(tempObject[string[i]] === undefined){
+            //does that thing(key) exist in the object?
+            tempObject[string[i]] = 1;//{'h':1, 'e':1, 'l':2}
+            //if it doesnt then create it and set equel to 1
+        }
+    else {
+        // if already there, add to it
+        tempObject[string[i]] += 1;
+    }
+    }
+    var finalString = ""
+    for (var key in tempObject){//This is used because its an object
+        //goes through each key in the object
+        if(tempObject[key] === 1){
+            // tests whether the value = 1 and if so adds the value to final string
+            finalString += key
+        }
+    }
+    return finalString
+}
+console.log(getUniqueLettersFrom("Hello"));
+
+//given 2 arrays, generate an object, lengths are equel. Key from array 1 and value from array 2.
+function zipArrays(arr1, arr2){
+    var emptyObject = {}
+    for(var i = 0; i < arr1.length; i++){
+        emptyObject[arr1[i]] = arr2[i];
+    }
+    return emptyObject;
+}
+console.log(zipArrays([1,"fuck",144], ["yikes!", 13, 100]));
+
+function zipArrays(arr1, arr2){
+    var emptyObject = {}
+    for(var i = 0; i < arr1.length; i++){
+        emptyObject[arr[i]] = arr2[i];
+    }
+}
 
 var people = [
     {
