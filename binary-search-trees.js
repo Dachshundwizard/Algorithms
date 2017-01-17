@@ -95,3 +95,23 @@ BST.prototype.contains = function(value){
 console.log(bst.contains(50));
 console.log(bst.contains(59));
 console.log(bst.contains(15));
+
+
+                                                        /////////// Depth First Traversal (in order) ///////////
+                                                        // Our iteratorFunc will simply log nodes out to the console.
+                                                        // Travel through all of the nodes in our BST and run the iteratorFunc on each node. And it will follow down to the
+                                                        // end of the branch before going to the next branch. (depth first)
+                                                        // We will recursively touch every node in order from least to greatest
+                                                        /////////// Depth First Traversal (in order) ///////////
+
+BST.prototype.depthFirstTraversal = function(iteratorFunc) {
+    if(this.left) this.left.depthFirstTraversal(iteratorFunc);
+    iteratorFunc(this.value);                           // run the iteratorFunc on the current node
+    if(this.right) this.left.depthFirstTraversal(iteratorFunc);
+}
+
+bst.depthFirstTraversal(log);
+
+function log(value){
+    console.log(value);
+}
