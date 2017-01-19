@@ -107,11 +107,11 @@ console.log(bst.contains(15));
 BST.prototype.depthFirstTraversal = function(iteratorFunc) {
     if(this.left) this.left.depthFirstTraversal(iteratorFunc);
     iteratorFunc(this.value);                           // run the iteratorFunc on the current node
-    if(this.right) this.left.depthFirstTraversal(iteratorFunc);
+    if(this.right) this.right.depthFirstTraversal(iteratorFunc);
 }
 
 bst.depthFirstTraversal(log);
 
-function log(value){
+function log(value){                                    // This will log out the value of the node
     console.log(value);
 }
