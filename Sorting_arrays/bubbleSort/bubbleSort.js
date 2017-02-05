@@ -12,11 +12,12 @@ function bubbleSort(arr){
                 arr[j] = temp;
             }
         }
+        console.log(arr);
     }
     return arr
 }
 
-console.log(bubbleSort([4,3,6,9,3]));
+console.log(bubbleSort([9, 5, 3, 8, 10, 2]));
 
 
 
