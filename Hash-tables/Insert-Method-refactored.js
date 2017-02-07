@@ -22,14 +22,14 @@ HashTable.prototype.hash = function(key) {
 
 
 HashTable.prototype.insert = function(key, value) {
-    var index = this.hash(key); // determines what bucket it will go into
+    var index = this.hash(key); // determines what bucket it will go into. It will go into whatever our index variable turns out to be 
     if(!this.buckets[index]) {
         this.buckets[index] = new HashNode(key, value); // If there is nothing in the bucket at the given index, we will make a node and put it in the bucket
     }
     else if(this.buckets[index].key === key){ // Otherwise, check the first node in the bucket
         this.buckets[index].value = value; // It becomes equal to the value we passed in to our method
     }
-    else { // if there is a node (or multiple)
+    else { // if there is a node or multiple
         var currentNode = this.buckets[index]; // Starting point initiated, and setting it to first node in bucket.
         while(currentNode.next) { // While there is an other node in the chain
             if(currentNode.next.key === key) {
@@ -50,4 +50,4 @@ myHT.insert('Mike', 'mike112@gmail.com');
 myHT.insert('Issa', 'poooooop@gmail.com');
 myHT.insert('Dane', 'dane@yahoo.com');
 myHT.insert('Dean', 'deanlalalal@gmail.com');
-console.log(myHT.buckets); // logging out hash table 
+console.log(myHT.buckets); // logging out hash table
