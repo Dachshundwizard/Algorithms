@@ -12,7 +12,7 @@ function HashNode(key, value, next){
 HashTable.prototype.hash = function(key){
     total = 0;
     for(var i = 0; i < key.length; i++){
-        total = total += charCodeAt(i);
+        total += key.charCodeAt(i);
     }
     var bucket = total % this.numBuckets;
     return bucket;
@@ -61,3 +61,6 @@ myHT.insert('Dean', 'dean@gmail.com');
 myHT.insert('Quinten', 'quinten@gmail.com');
 myHT.insert('Mike', 'mike112@gmail.com');
 myHT.insert('Issa', 'poooooop@gmail.com');
+console.log(myHT.get('Dean'));
+console.log(myHT.get('Mike'));
+console.log(myHT.get('Quinten'));

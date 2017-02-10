@@ -143,4 +143,4 @@ function insertionSort(array){
     }
     return array;
 }
-console.log(insertionSort([5,4,3,2,1]));
+console.log(insertionSort([4,3,6,6,43,66,436,4366]));
