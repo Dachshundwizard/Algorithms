@@ -44,6 +44,20 @@ var cdAlgorithms = function () {
 
     return algos;
 
+function threesAndFives(a,b){
+    var sum = 0;
+    for(var i = a; i <= b; i++) {
+        if(i % 3 == 0 && i % 5 == 0){
+            continue;
+        }
+        else if(i % 3 == 0 || i % 5 ==0){
+            sum += 1;
+        }
+    }
+    return sum;
+}
+console.log(threesAndFives(100,5000));
+
     /**
      * Given an array and value, make the value magically appear at the fronts.
      */

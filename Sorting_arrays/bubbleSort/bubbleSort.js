@@ -12,7 +12,7 @@ function bubbleSort(arr){
                 arr[j] = temp;
             }
         }
-        console.log(arr);
+        // console.log(arr);
     }
     return arr
 }
