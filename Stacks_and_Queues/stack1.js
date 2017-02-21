@@ -1,4 +1,4 @@
-function stackNode(val){
+function stackNode(val){   
     this.data = val;
     this.next = null;
 }
@@ -104,7 +104,7 @@ function divideBy2(decNumber){ // Whole num in this case
     var remStack = new Stack(), // Remainder stack is a new isntance of Stack()
         rem, // Setting remainder
         binaryString = ''; // Setting a blank string
-    while(decNumber > 0){ //{1}} 
+    while(decNumber > 0){ //{1}}
         rem = Math.floor(decNumber % 2); //{2}
         remStack.push(rem); //{3}
         decNumber = Math.floor(decNumber / 2); //{4}
