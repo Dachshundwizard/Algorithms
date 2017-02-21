@@ -25,6 +25,8 @@ s.push(1)
 s.push('two')
 print s.peek()
 s.push(True)
+s.push(True)
+s.push(True)
 print s.size()
 
 print s.isEmpty()
