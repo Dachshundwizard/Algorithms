@@ -1,4 +1,4 @@
-function stackNode(val){   
+function stackNode(val){
     this.data = val;
     this.next = null;
 }
