@@ -18,19 +18,53 @@ class Stack(object):
     def size(self):
         return len(self.items)
 
-s = Stack()
-print s.isEmpty()
+s=Stack()
 
-s.push(1)
-s.push('two')
-print s.peek()
+print(s.isEmpty())
+s.push(4)
+s.push('dog')
+print(s.peek())
 s.push(True)
-s.push(True)
-s.push(True)
-print s.size()
+print(s.size())
+print(s.isEmpty())
+s.push(8.4)
+print(s.pop())
+print(s.pop())
+print(s.size())
 
-print s.isEmpty()
-s.pop()
-s.pop()
-s.pop()
-print s.isEmpty()
+########################################################
+########################################################
+########################################################
+
+class Stack:
+     def __init__(self):
+         self.items = []
+
+     def isEmpty(self):
+         return self.items == []
+
+     def push(self, item):
+         self.items.append(item)
+
+     def pop(self):
+         return self.items.pop()
+
+     def peek(self):
+         return self.items[len(self.items)-1]
+
+     def size(self):
+         return len(self.items)
+
+s=Stack()
+
+print(s.isEmpty())
+s.push(4)
+s.push('dog')
+print(s.peek())
+s.push(True)
+print(s.size())
+print(s.isEmpty())
+s.push(8.4)
+print(s.pop())
+print(s.pop())
+print(s.size())
