@@ -1,130 +1,130 @@
-# // // function reverseArray(arr){
-# // //     var newArray = []
-# // //     for(var i = arr.length-1; i>=0; i--){
-# // //         newArray.push(arr[i]);
-# // //     }
-# // //     console.log(newArray);
-# // //     return newArray;
-# // // }
-# // // reverseArray([1,2,3,4,5]);
-# // //
-#
-# //
-# // function reverseArray(arr){
-# //     for(var i = 0; Math.floor(arr.length/2); i++){
-# //         var last = arr.length-1-i;
-# //         var temp = arr[i];
-# //         arr[i] = arr[last];
-# //         arr[last] = temp;
-# //     }
-# //     return arr;
-# // }
-# //
-# // function reverseArray(arr){
-# //     for(var i = 0; i < Math.floor(arr.length/2); i++){
-# //         var last = arr.length-1-i;
-# //         var temp = arr[i];
-# //         arr[i] = arr[last];
-# //         arr[last] = temp;
-# //     }
-# //     return arr;
-# // }
-# //
-# // function reverseArray(arr){
-# //     var newArray = []
-# //     for(var i = arr.length-1; i >= 0; i--){
-# //         newArray.push(arr[i]);
-# //     }
-# //
-# // }
-# // {% for author in authors %}
-# //
-# //
-# // return render_template("index.html", books=books)//This will be a list of dictionaries.
-# // {% for book in books %}
-# // <tr><td>{{book.title}}</td>
-# // <td>{{book.first_name}}</td>
-# // </tr>
-# // {% endfor %}
-# //
-# //
-# // var people = [{
-# //
-# // }]
-# // function spareChange(money){
-# //     var monObj = {
-# //         hundred : 100,
-# //         fifty : 50,
-# //         twenty : 20,
-# //         ten : 10,
-# //         dollar : 1,
-# //         quarter: .25,
-# //         dime : .10,
-# //         nickel : .05,
-# //         penny : .01
-# //     },
-# //     result = [];
-# //
-# //     for(var denom in monObj){
-# //             var monResult = {
-# //                 type : denom,
-# //                 amount : Math.floor(money / monObj[denom])
-# //             };
-# //             money = money % monObj[denom];
-# //             money = Math.round(money * 100);
-# //             money /= 100;
-# //             console.log(money);
-# //             result.push(monResult);
-# //     }
-# //     return result;
-# // }
-# // console.log(spareChange(215.20));
-# // function reverseArray(arr){
-# //     arr.reverse();
-# //     return arr;
-# // }
-# // console.log(reverseArray([1,2,3,4,5]));
-#
-# // var people = [
-# //     {
-# //         name : "Quinten",
-# //         pet_id : 1
-# //     },
-# //     {
-# //         name : "Rob",
-# //         pet_id : 2
-# //     },
-# //     {
-# //         name : "Casey",
-# //         pet_id : 1
-# //     }
-# // ]
-# // var pets = [
-# //     {
-# //         id : 1,
-# //         type : "Dachshund"
-# //     },
-# //     {
-# //         id : 2,
-# //         type : "T-Rex with laser eyes"
-# //     }
-# // ]
-# //
-# // function joinBypet_id(people, pets){
-# //     var result = [];
-# //     for(var i = 0; i < people.length; i++){
-# //         var obj = {};
-# //         obj.name = people[i].name;
-# //         for(var j = 0; j < pets.length; j++){
-# //             if(people[i].pet_id == pets[j].id){
-# //                 obj.pet = pets[j].type;
-# //             }
-# //         }
-# //         result.push(obj);
-# //     }
-# //     return result;
-# // }
-# // console.log(joinBypet_id(people, pets));
+      function reverseArray(arr){
+          var newArray = []
+          for(var i = arr.length-1; i>=0; i--){
+              newArray.push(arr[i]);
+          }
+          console.log(newArray);
+          return newArray;
+      }
+      reverseArray([1,2,3,4,5]);
+
+
+
+    function reverseArray(arr){
+        for(var i = 0; Math.floor(arr.length/2); i++){
+            var last = arr.length-1-i;
+            var temp = arr[i];
+            arr[i] = arr[last];
+            arr[last] = temp;
+        }
+        return arr;
+    }
+
+    function reverseArray(arr){
+        for(var i = 0; i < Math.floor(arr.length/2); i++){
+            var last = arr.length-1-i;
+            var temp = arr[i];
+            arr[i] = arr[last];
+            arr[last] = temp;
+        }
+        return arr;
+    }
+
+    function reverseArray(arr){
+        var newArray = []
+        for(var i = arr.length-1; i >= 0; i--){
+            newArray.push(arr[i]);
+        }
+
+    }
+    {% for author in authors %}
+
+
+    return render_template("index.html", books=books) This will be a list of dictionaries.
+    {% for book in books %}
+    <tr><td>{{book.title}}</td>
+    <td>{{book.first_name}}</td>
+    </tr>
+    {% endfor %}
+
+
+    var people = [{
+
+    }]
+    function spareChange(money){
+        var monObj = {
+            hundred : 100,
+            fifty : 50,
+            twenty : 20,
+            ten : 10,
+            dollar : 1,
+            quarter: .25,
+            dime : .10,
+            nickel : .05,
+            penny : .01
+        },
+        result = [];
+
+        for(var denom in monObj){
+                var monResult = {
+                    type : denom,
+                    amount : Math.floor(money / monObj[denom])
+                };
+                money = money % monObj[denom];
+                money = Math.round(money * 100);
+                money /= 100;
+                console.log(money);
+                result.push(monResult);
+        }
+        return result;
+    }
+    console.log(spareChange(215.20));
+    function reverseArray(arr){
+        arr.reverse();
+        return arr;
+    }
+    console.log(reverseArray([1,2,3,4,5]));
+
+    var people = [
+        {
+            name : "Quinten",
+            pet_id : 1
+        },
+        {
+            name : "Rob",
+            pet_id : 2
+        },
+        {
+            name : "Casey",
+            pet_id : 1
+        }
+    ]
+    var pets = [
+        {
+            id : 1,
+            type : "Dachshund"
+        },
+        {
+            id : 2,
+            type : "T-Rex with laser eyes"
+        }
+    ]
+
+    function joinBypet_id(people, pets){
+        var result = [];
+        for(var i = 0; i < people.length; i++){
+            var obj = {};
+            obj.name = people[i].name;
+            for(var j = 0; j < pets.length; j++){
+                if(people[i].pet_id == pets[j].id){
+                    obj.pet = pets[j].type;
+                }
+            }
+            result.push(obj);
+        }
+        return result;
+    }
+   console.log(joinBypet_id(people, pets));
 from random import randint
 
 print "Scores and Grades"
