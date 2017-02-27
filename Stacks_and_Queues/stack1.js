@@ -98,6 +98,35 @@ console.log(stack1.push(10));
 stack1.print();
 
 //////////////////// More Stacks ////////////////////
+
+var Stack = function(){
+    this.top = null;
+    this.size = 0;
+};
+
+var Node = function(data){
+    this.data = data;
+    this.previous = null;
+};
+
+Stack.prototype.push = function(data){
+    var node = var Node(data);
+
+    node.previous = this.top;
+    this.top = node;
+    this.size += 1;
+    return this.top;
+};
+
+Stack.prototype.pop = function(){
+    temp = this.top;
+    this.tope = this.top.previous;
+    this.size -= 1;
+    return temp;
+};
+
+
+
 //////////////////// Decimal to Binary ////////////////////
 
 function divideBy2(decNumber){ // Whole num in this case
