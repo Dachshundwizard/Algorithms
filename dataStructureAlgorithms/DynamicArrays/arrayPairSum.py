@@ -29,7 +29,7 @@ def pair_sum(arr,k):
     return '\n'.join(map(str,list(output)))
 
 
-print pair_sum([4,3,2,1], 4)
+print(pair_sum([4,3,2,1], 5))
 
 ################################################################################################
 ################################################################################################
@@ -51,6 +51,30 @@ def pair_sum(arr,k):
         else:
             output.add( (min(num,target), max(num,target)) )
 
-    return "The resulting unique pair that adds up to the k value of " + `k` + " is "  + '\n'.join(map(str,list(output)))
+    return "The resulting unique pair that adds up to the k value of " + `{k}` + " is "  + '\n'.join(map(str,list(output)))
 
-print pair_sum([4,1,2,3], 4)
+print(pair_sum([4,1,2,3], 4))
+
+
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+
+
+
+def pair_sum(arr,k):
+    if len(arr)<2:
+        return 'Array is too short.'
+    seen = set()
+    output = set()
+
+    for num in arr:
+        target = k-num
+        if target not in seen:
+            seen.add(num)
+        else:
+            output.add( (min(num,target), max(num,target)) )
+    return "The resulting unique pair(s) that add up to the k value of %s " % k + "is " + '\n'.join(map(str,list(output)))
+
+print(pair_sum([4,3,2,1], 5))

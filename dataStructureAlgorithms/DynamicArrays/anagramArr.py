@@ -19,15 +19,21 @@ def anagram2(s1,s2):
                                                                                             # Fill dictionary for first string (add counts)
     for letter in s1:
         if letter in count:
+            print('hi')
             count[letter] += 1
+            print('hi')
         else:
             count[letter] = 1
+    print('hi')
                                                                                             # Fill dictionary for second string (subtract counts)
     for letter in s2:
+        print('hi')
         if letter in count:
             count[letter] -= 1
         else:
             count[letter] = 1
+            print('hi')
+    print('hi')
                                                                                             # Check that all counts are 0
     for k in count:
         if count[k] != 0:
@@ -35,3 +41,5 @@ def anagram2(s1,s2):
 
                                                                                             # Otherwise they're anagrams
     return True
+
+print(anagram2('gogggg','asdf'))
