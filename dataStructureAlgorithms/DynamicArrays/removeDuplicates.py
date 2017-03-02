@@ -16,11 +16,32 @@ print(remove_duplicates([5,5,4,3,2,2,1]))
 
 def remove_duplicates(lst):
     seen = set()
-    res = []
+    new = []
     for x in lst:
         if x not in seen:
-            res.append(x)
+            new.append(x)
             seen.add(x)
-    return res
+            # print(seen)
+    return new
+
 
 print(remove_duplicates([5,4,3,3,3,2,1]))
+
+################################################################################################
+################################################################################################
+################################################################################################
+################################################################################################
+
+
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+for q, a in zip(questions, answers):
+    print('What is your {0}?  It is {1}.'.format(q, a))
+
+
+my_dict = {}
+for x in range(0,100):
+  my_dict[x] = str(x)
+
+for item in my_dict.items():
+  print (item)
