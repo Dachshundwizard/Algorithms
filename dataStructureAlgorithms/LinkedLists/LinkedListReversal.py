@@ -1,18 +1,25 @@
-class Node():
+#making each head point to the previous Node
+#this will also take place in cosntant place
+#Linear time 0(n)
+#Changing the direction of where the nodes are pointing
+
+class Node(object):
     def __init__(self,value):
         self.value = value
-        self.nextnode = None
+        self.next_node = None
 
 def reverse(head):
     current = head
     previous = None
-    nextnode = None
+    next_node = None
 
-    while current:
-        nextnode = current.nextnode
-        current.nextnode = previous
-        previous = current
-        current = nextnode
+
+
+    while current: #Let us know until weve gone through the end of the list
+        next_node = current.next_node #Make sure to copy current.next_node into next_node before setting current.next_node to previous
+        current.next_node = previous
+        previous = current # previous is now equal to the current Node
+        current = next_node
     return previous
 
 a = Node(1)
@@ -20,18 +27,19 @@ b = Node(2)
 c = Node(3)
 d = Node(4)
 
-a.nextnode = b
-b.nextnode = c
-c.nextnode = d
+a.next_node = b
+b.next_node = c
+c.next_node = d
 
-print(a.nextnode.value)
-print(b.nextnode.value)
-print(c.nextnode.value)
+print(a.value)
+print(a.next_node.value)
+print(b.next_node.value)
+print(c.next_node.value)
 
-print(reverse(a))
-print(d.nextnode.value)
-print(c.nextnode.value)
-print(b.nextnode.value)
+reverse(a)
+print(d.next_node.value)
+print(c.next_node.value)
+print(b.next_node.value)
 
 
 #*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@
