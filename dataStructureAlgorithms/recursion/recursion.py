@@ -134,9 +134,14 @@ def permute(s):
         for i, letter in enumerate(s):    # For every letter is string:
             # For every permutation resulting from step 2 and 3
             for perm in permute(s[:i] + s[i+1:]): # Everything up until current index + [i+1]all the way to the end
-                print('perm is ', perm)
+                print('perm is', perm)
                 out += [letter + perm]
 
     return out
 
-print(permute('hello'))
+print(permute('dog'))
+
+
+#••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+#••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
