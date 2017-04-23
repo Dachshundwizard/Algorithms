@@ -39,3 +39,9 @@ llist.printList()
 llist.reverse()
 print ("\nReversed Linked List")
 llist.printList()
+
+
+class LinkedList:
+    def __init__(self):
+        self.next = None
+        self.prev = None

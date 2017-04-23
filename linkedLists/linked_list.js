@@ -111,3 +111,9 @@ LinkedList.prototype.indexOf = function(value) {
 // var node1 = new Node(100, 'node2', null);
 // // console.log(LL);
 // console.log(node1);
+
+
+
+"Why can't jesus eat m&m's?"
+
+They fall through his hands!
