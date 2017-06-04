@@ -68,3 +68,17 @@ LinkedList.prototype.search = function(searchValue){
 
 var ll = new LinkedList();
 ll.search();
+
+
+
+Hello!
+
+Hello!
+
+Hello!
+
+Hello!
+
+Hello!
+
+Hello! 
