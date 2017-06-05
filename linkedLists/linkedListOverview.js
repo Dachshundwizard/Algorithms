@@ -57,6 +57,7 @@ LinkedList.prototype.removeTail = function() {
 //     }
 // }
 
+
 LinkedList.prototype.search = function(searchValue){
     var currentNode = this.head;
     while(currentNode) {
@@ -66,19 +67,10 @@ LinkedList.prototype.search = function(searchValue){
     return null;
 };
 
-var ll = new LinkedList();
-ll.search();
-
-
-
-Hello!
-
-Hello!
-
-Hello!
-
-Hello!
-
-Hello!
-
-Hello! 
+LL.addToHead(10);
+LL.addToHead(20);
+LL.addToHead(30);
+LL.addToTail(50);
+LL.addToTail(400);
+LL.addToTail(24);
+LL.search(5);
