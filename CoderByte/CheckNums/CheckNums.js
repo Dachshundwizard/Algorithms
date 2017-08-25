@@ -29,6 +29,24 @@ function CheckNums(num1, num2) {
 console.log(CheckNums(3, 122));
 
 
+                            ///////////////// An other Ternary Example /////////////////
+
+                            var now = new Date();
+                            var greeting = "Good" + ((now.getHours() > 17) ? " evening." : " day.");
+                            console.log(greeting);
+
+
+                            var now = new Date();
+                            var greeting = "Good";
+                            if (now.getHours() > 17) {
+                              greeting += " evening.";
+                            }
+                            else {
+                              greeting += " day.";
+                            }
+
+                            console.log(greeting);
+
 
 
 
